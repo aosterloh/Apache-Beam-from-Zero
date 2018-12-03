@@ -18,7 +18,7 @@ cd beam4dummies
 ```
 
 
-## Running our first pipeline
+## Running our first pipeline (tornado01.py)
 My examples build up and are loosely based on the Apache Beam example of weather - specifically tornado - data example found here:
 https://github.com/apache/beam/tree/master/examples/java/src/main/java/org/apache/beam/examples/complete
 
@@ -38,33 +38,48 @@ Next let's make sure running our first Beam pipeline actually works. Just enter
 ```
 python tornado01.py
 ```
-That should read the small local CSV file and output a local file like `extracted_tornados-00000-of-00001`
+That should read the small local CSV file and output a local file like `extracted_tornados-00000-of-00001`. Spoiler, the pipelines does nothing except read data and write it back to file. We will look at transforms later. 
 
 ## Looking at the code
-Let's go through the code, line by line. 
+Let's go through the code, line by line. But it helps if you first go through the Apache Beam Programming Guide found here:
+https://beam.apache.org/documentation/programming-guide/
 
 ### Import statements
 If we want to use apache beam, we have to import it. As we are also dealing with csv files, let's make life easy and import that library too. 
 ```
 import apache_beam as beam
-import csv
 ```
 
-### Setting up the pipeline 
-
-
+### Creating the pipeline 
 ```
-if __name__ == '__main__':
-   with beam.Pipeline('DirectRunner') as pipeline:
-```
+pipeline =  beam.Pipeline('DirectRunner')
 
 ```
-      airports = (pipeline
-         | beam.io.ReadFromText('test_small.csv')
-         | beam.Map(lambda line: next(csv.reader([line])))
-         | beam.Map(lambda fields: (fields[3], (fields[30])))
-         | beam.io.textio.WriteToText('extracted_tornados')
-      )
-      pipeline.run()
+### Read and Write
+First we are creating a pipeline and passing data through it. Data is passed from transform to transform as a PCollection. The first and last transform - like here our only 2 transforms - are for reading data from an external source (bounded or unbounded, more on this later) and writing to an external source. 
+
+`ReadFromText` in the following can read a file - local in our case - but can also be a file on Google Cloud Storage. 
+This line is creating a PCollection from our small test csv file, where each element is one line of the file. 
+
+`WriteToText` is used here to take the data and write it to a local file. Again, this could be a sink on GCS or BigQuery, which we will go through later. 
+
 ```
+airports = (pipeline
+ | beam.io.ReadFromText('test_small.csv')
+ | beam.io.textio.WriteToText('extracted_tornados')   
+)
+```
+
+### Running the pipeline
+While the steps before defined our DAG, in order to execute the pipeline, we actually have to run it. So will call `run()` on our pipeline object. 
+
+```
+pipeline.run()
+```
+
+## Expanding the Pipeline (tornado02.py)
+
+
+
+
 
