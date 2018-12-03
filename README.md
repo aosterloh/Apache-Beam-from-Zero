@@ -141,3 +141,27 @@ python tornados02.py
 ```
 
 Alternatively you can repace the small csv file from line 8 with `test_medium.csv` which processes about 25MB locally. Check the output file `less extract*` which should be around 150K lines. 
+
+## Expanding the Pipeline (tornados03.py)
+WIP
+
+## Expanding the Pipeline (tornados04.py)
+WIP
+
+## Expanding the Pipeline (tornados05.py)
+WIP
+
+## Expanding the Pipeline (tornados06.py)
+WIP
+
+## Expanding the Pipeline (tornados07.py)
+WIP
+
+## Expanding the Pipeline (tornados08.py)
+WIP
+
+## Expanding the Pipeline (tornados09.py)
+WIP
+
+## Expanding the Pipeline (tornados10.py)
+WIP
