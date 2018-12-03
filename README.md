@@ -140,4 +140,4 @@ Run the pipeline to see what it does.
 python tornados02.py
 ```
 
-Alternatively you can repace the small csv file from line 8 with `test_medium.csv` which processes about 25MB locally. Check the output file `less extract*`
+Alternatively you can repace the small csv file from line 8 with `test_medium.csv` which processes about 25MB locally. Check the output file `less extract*` which should be around 150K lines. 
