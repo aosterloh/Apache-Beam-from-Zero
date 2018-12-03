@@ -18,7 +18,7 @@ cd beam4dummies
 ```
 
 
-## Our first pipeline
+## Running our first pipeline
 My examples build up and are loosely based on the Apache Beam example of weather - specifically tornado - data example found here:
 https://github.com/apache/beam/tree/master/examples/java/src/main/java/org/apache/beam/examples/complete
 
@@ -40,4 +40,31 @@ python tornado01.py
 ```
 That should read the small local CSV file and output a local file like `extracted_tornados-00000-of-00001`
 
+## Looking at the code
+Let's go through the code, line by line. 
+
+### Import statements
+If we want to use apache beam, we have to import it. As we are also dealing with csv files, let's make life easy and import that library too. 
+```
+import apache_beam as beam
+import csv
+```
+
+### Setting up the pipeline 
+
+
+```
+if __name__ == '__main__':
+   with beam.Pipeline('DirectRunner') as pipeline:
+```
+
+```
+      airports = (pipeline
+         | beam.io.ReadFromText('test_small.csv')
+         | beam.Map(lambda line: next(csv.reader([line])))
+         | beam.Map(lambda fields: (fields[3], (fields[30])))
+         | beam.io.textio.WriteToText('extracted_tornados')
+      )
+      pipeline.run()
+```
 
