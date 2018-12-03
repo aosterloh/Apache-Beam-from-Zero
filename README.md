@@ -5,14 +5,16 @@ Follow the steps described here
 https://beam.apache.org/get-started/quickstart-py/
 
 Using my mac, these are the steps I followed:
-'''
+
+```
 pip install --upgrade pip
 pip install --upgrade virtualenv
 virtualenv tornado --python=python2.7
 source tornado/bin/activate # activate your env
+cd tornado
 pip install apache-beam[gcp]
-
-'''
+git clone https://github.com/aosterloh/beam4dummies.git
+```
 
 
 ## Our first pipeline
