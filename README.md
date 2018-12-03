@@ -38,7 +38,7 @@ Next let's make sure running our first Beam pipeline actually works. Just enter
 ```
 python tornado01.py
 ```
-That should read the small local CSV file and output a local file like `extracted_tornados-00000-of-00001`. Spoiler, the pipelines does nothing except read data and write it back to file. We will look at transforms later. 
+That should read the small local CSV file and output a local file like `extracted_tornados-00000-of-00001`. Spoiler, the pipelines does nothing except read data and write it back to file. We will look at other transforms later. 
 
 ## Looking at the code
 Let's go through the code, line by line. But it helps if you first go through the Apache Beam Programming Guide found here:
