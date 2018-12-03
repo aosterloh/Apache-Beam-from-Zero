@@ -22,13 +22,22 @@ cd beam4dummies
 My examples build up and are loosely based on the Apache Beam example of weather - specifically tornado - data example found here:
 https://github.com/apache/beam/tree/master/examples/java/src/main/java/org/apache/beam/examples/complete
 
-The above example reads and writes to BigQuery. You can first look at the dataset here
+The above example reads and writes to BigQuery. You can play with the dataset here
 https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=samples&t=gsod&page=table
 
 You can play with the dataset and try a quick query, e.g. see the month with the most tornados
-````
-SELECT month, count(month) as num  FROM `<YOUR-PROJECT-ID>.gsod.tornados` where tornado
-group by month
-order by num desc
+
 ```
+SELECT month, count(month) as num  
+FROM `<YOUR-PROJECT-ID>.gsod.tornados` 
+WHERE tornado
+GROUP BY month
+ORDER BY num desc
+```
+Next let's make sure running our first Beam pipeline actually works. Just enter 
+```
+python tornado01.py
+```
+That should read the small local CSV file and output a local file like `extracted_tornados-00000-of-00001`
+
 
