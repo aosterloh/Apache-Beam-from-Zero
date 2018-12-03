@@ -14,6 +14,7 @@ source tornado/bin/activate # activate your env
 cd tornado
 pip install apache-beam[gcp]
 git clone https://github.com/aosterloh/beam4dummies.git
+cd beam4dummies
 ```
 
 
