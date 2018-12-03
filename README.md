@@ -1,5 +1,6 @@
 # Apache Beam for Python Dummies 
-If new to Apache Beam and also new to Python, getting started can be hard. A new SDK plus non-trivial concepts of streaming in a python code that is often hard to read can be daunting. It was daunting for myself so I created this step by step guide starting at zero. It stops where other tutorials picks up. This is to get you started if other code examples left you stranded in the cold. 
+If new to Apache Beam and also new to Python, getting started can be hard. A new SDK plus non-trivial concepts of streaming can be daunting at first. It was daunting for myself so I created this step by step guide starting at (almost) zero. It stops where other tutorials pick up. This is to get you started if other code examples left you stranded in the cold. 
+
 ## Setup
 Follow the steps described here
 https://beam.apache.org/get-started/quickstart-py/
