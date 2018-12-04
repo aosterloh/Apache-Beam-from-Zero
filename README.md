@@ -61,7 +61,7 @@ pipeline.run()
 
 
 ### Import statements
-If we want to use apache beam, we have to import it. As we are also dealing with csv files, let's make life easy and import that library too. 
+If we want to use apache beam, we have to import it. 
 ```
 import apache_beam as beam
 ```
