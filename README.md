@@ -73,9 +73,11 @@ pipeline =  beam.Pipeline('DirectRunner')
 ```
 
 ### Read and Write
-First we are creating a pipeline and passing data through it. Data is passed from transform to transform as a PCollection. The first and last transform - like here our only 2 transforms - are for reading data from an external source (bounded or unbounded, more on this later) and writing to an external source. 
+First we are creating a pipeline and passing data through it. Data is passed from transform to transform as a unmutable PCollection. The first and last transform are usually for reading data from an external source (bounded or unbounded, more on this later) and writing to an external source. 
 
 ![Transforms](https://beam.apache.org/images/design-your-pipeline-linear.png)
+
+**Image taken from Apache Beam Programming Guide, in example 1 we just read from source and write to sink**
 
 `ReadFromText` in the following can read a file - local in our case - but can also be a file on Google Cloud Storage. 
 This line is creating a PCollection from our small test csv file, where each element is one line of the file. 
