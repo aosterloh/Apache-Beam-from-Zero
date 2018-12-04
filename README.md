@@ -79,10 +79,9 @@ First we are creating a pipeline and passing data through it. Data is passed fro
 
 **Image taken from Apache Beam Programming Guide, in example 1 we just read from source and write to sink**
 
-`ReadFromText` in the following can read a file - local in our case - but can also be a file on Google Cloud Storage. 
-This line is creating a PCollection from our small test csv file, where each element is one line of the file. 
+`ReadFromText` corresponds to the `Input` transform above, will read a file - local in our case - but can also be a file on Google Cloud Storage.  This line is creating a PCollection from our small test csv file, where each element is one line of the file. 
 
-`WriteToText` is used here to take the data and write it to a local file. Again, this could be a sink on GCS or BigQuery, which we will go through later. 
+`WriteToText` corresponds to the `Output` above and is used to write the current PCollection to a data sink, in our case again to a local file. This could be a sink on GCS or BigQuery, which we will go through later. 
 
 ```
 airports = (pipeline
