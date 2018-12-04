@@ -29,8 +29,9 @@ https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=samples&t=gso
 You can play with the dataset and try a quick query, e.g. see the month with the most tornados
 
 ```
+#standardSQL
 SELECT month, count(month) as num  
-FROM `<YOUR-PROJECT-ID>.gsod.tornados` 
+FROM `bigquery-samples.weather_geo.gsod` 
 WHERE tornado
 GROUP BY month
 ORDER BY num desc
