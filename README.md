@@ -25,7 +25,7 @@ https://github.com/apache/beam/tree/master/examples/java/src/main/java/org/apach
 The above example reads and writes to BigQuery. You can play with the dataset here
 https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=samples&t=gsod&page=table
 
-You can play with the dataset and try a quick query, e.g. see the month with the most tornados
+You can play with the dataset and try a quick query, e.g. see the month with the most tornadoes
 
 ```
 #standardSQL
@@ -39,13 +39,13 @@ Next let's make sure running our first Beam pipeline actually works. Just enter
 ```
 python tornado01.py
 ```
-That should read the small local CSV file and output a local file like `extracted_tornados-00000-of-00001`. Spoiler, the pipelines does nothing except read data and write it back to file. We will look at other transforms later. 
+That should read the small local CSV file and output a local file like `extracted_tornadoes-00000-of-00001`. Spoiler, the pipelines does nothing except read data and write it back to file. We will look at other transforms later. 
 
 ## Looking at the code
 Let's go through the code, line by line. But it helps if you first go through the Apache Beam Programming Guide found here:
 https://beam.apache.org/documentation/programming-guide/
 
-Here is the full code from example 1 (tornados01.py)
+Here is the full code from example 1 (tornadoes01.py)
 ```
 import apache_beam as beam
 
@@ -53,7 +53,7 @@ pipeline =  beam.Pipeline()
 
 airports = (pipeline
  | beam.io.ReadFromText('test_small.csv')
- | beam.io.textio.WriteToText('extracted_tornados')   
+ | beam.io.textio.WriteToText('extracted_tornadoes')   
 )
 pipeline.run()
 ```
