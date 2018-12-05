@@ -1,6 +1,10 @@
 # Apache Beam for Python Dummies 
 If new to Apache Beam and also new to Python, getting started can be hard. A new SDK plus non-trivial concepts of streaming can be daunting at first. It was daunting for myself so I created this step by step guide starting at (almost) zero. It stops where other tutorials pick up. This is to get you started if other code examples left you stranded in the cold. We start with processing local files and running beam locally to running Beam on Dataflow on GB of weather data. I will start with batch processing and then move to streaming examples. 
 
+If Beam is new to you, I urge you to stop here and first read through the Apache Beam Programming Guide:
+https://beam.apache.org/documentation/programming-guide/
+
+
 ## Setup
 With a MAC, follow the steps described below, otherwise have a look here:
 https://beam.apache.org/get-started/quickstart-py/
@@ -42,7 +46,7 @@ python tornado01.py
 That should read the small local CSV file and output a local file like `extracted_tornadoes-00000-of-00001`. Spoiler, the pipelines does nothing except read data and write it back to file. We will look at other transforms later. 
 
 ## Looking at the code
-Let's go through the code, line by line. But it helps if you first go through the Apache Beam Programming Guide found here:
+Let's go through the code, line by line. As mentioned above, there are no shortcuts, the Apache Beam Programming Guide is great introduction read before you continue: 
 https://beam.apache.org/documentation/programming-guide/
 
 Here is the full code from example 1 (tornadoes01.py)
