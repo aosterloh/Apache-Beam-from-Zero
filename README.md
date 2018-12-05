@@ -88,7 +88,7 @@ First we are creating a pipeline and passing data through it. Data is passed fro
 `WriteToText` corresponds to the `Output` above and is used to write the current PCollection to a data sink, in our case again to a local file. This could be a sink on GCS or BigQuery, which we will go through later. 
 
 ```
-airports = (pipeline
+tornadoes = (pipeline
  | beam.io.ReadFromText('test_small.csv')
  | beam.io.textio.WriteToText('extracted_tornados')   
 )
@@ -112,7 +112,7 @@ import csv
 if __name__ == '__main__':
    with beam.Pipeline('DirectRunner') as pipeline:
 
-      airports = (pipeline 
+      tornadoes = (pipeline 
       		| beam.io.ReadFromText('test_small.csv', skip_header_lines=1)
       		| beam.Map(lambda line: next(csv.reader([line])))
       		| beam.Map(lambda fields: (fields[3], (fields[30])))
@@ -129,11 +129,11 @@ Now we create a pipeline again, but within a `with` statement, which is just a n
 We are reading the same file as above, skipping the header row this time and using a lambda function twice to add 2 more transforms. 
 
 ```
-airports = (pipeline 
+tornadoes = (pipeline 
  | beam.io.ReadFromText('test_small.csv', skip_header_lines=1)
  | beam.Map(lambda line: next(csv.reader([line])))
  | beam.Map(lambda fields: (fields[3], (fields[30])))
-	| beam.io.textio.WriteToText('extracted_tornados') )
+ | beam.io.textio.WriteToText('extracted_tornados') )
  ```
 Pythons lambda functions allow you to specify an anonymous function in one line of code that will only be used once. You could call a function defined outside the transforms or get used to the lambda syntax. Check youtube for understanding lambda functions in Python if this is new to you. 
 
