@@ -35,7 +35,7 @@ jupyter notebook
 and open the downloaded notebook called `Python Basics for Apache Beam`
 
 
-## Running our first pipeline (tornado01.py)
+## Running our first pipeline (tornadoes01.py)
 My examples build up and are loosely based on the Apache Beam example of weather - specifically tornado - data example found here:
 https://github.com/apache/beam/tree/master/examples/java/src/main/java/org/apache/beam/examples/complete
 
