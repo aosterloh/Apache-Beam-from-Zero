@@ -21,6 +21,19 @@ git clone https://github.com/aosterloh/beam4dummies.git
 cd beam4dummies
 ```
 
+## New to Python?
+If so, have a look at attached Jupyter notebook. Just install jupyter using 
+```
+pip install jupyter
+```
+
+Then start Jupyter using
+```
+jupyter notebook
+```
+
+and open the downloaded notebook called `Python Basics for Apache Beam`
+
 
 ## Running our first pipeline (tornado01.py)
 My examples build up and are loosely based on the Apache Beam example of weather - specifically tornado - data example found here:
