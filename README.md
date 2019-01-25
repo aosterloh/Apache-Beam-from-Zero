@@ -117,7 +117,9 @@ While the steps before defined our DAG, in order to execute the pipeline, we act
 pipeline.run()
 ```
 
-## Expanding the Pipeline (tornados02.py)
+You should see a file called `extracted_tornados-00000-of-00001` with the output of the pipeline (no surprise, it looks much like the input csv, as we did not apply any transformation on the data.
+
+## Expanding the Pipeline (tornadoes02.py)
 
 ## Looking at the code 
 Here is the full code of our 2nd example: 
