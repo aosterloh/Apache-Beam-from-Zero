@@ -8,7 +8,7 @@ if __name__ == '__main__':
       		| beam.io.ReadFromText('test_medium.csv', skip_header_lines=1)
       		| beam.Map(lambda line: next(csv.reader([line])))
       		| beam.Map(lambda fields: (fields[3], (fields[30])))
-		    | beam.io.textio.WriteToText('extracted_tornados') 
+		| beam.io.textio.WriteToText('extracted_tornados') 
       	)
 
       pipeline.run()
