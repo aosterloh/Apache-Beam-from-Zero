@@ -69,7 +69,7 @@ import apache_beam as beam
 pipeline =  beam.Pipeline()
 
 tornadoes = (pipeline
- | beam.io.ReadFromText('test_small.csv')
+ | beam.io.ReadFromText('data/gsod_small.csv')
  | beam.io.textio.WriteToText('extracted_tornadoes')   
 )
 pipeline.run()
@@ -102,7 +102,7 @@ First we are creating a pipeline and passing data through it. Data is passed fro
 
 ```
 tornadoes = (pipeline
- | beam.io.ReadFromText('test_small.csv')
+ | beam.io.ReadFromText('data/gsod_small.csv')
  | beam.io.textio.WriteToText('extracted_tornados')   
 )
 ```
@@ -131,7 +131,7 @@ if __name__ == '__main__':
    with beam.Pipeline('DirectRunner') as pipeline:
 
       tornadoes = (pipeline 
-      		| beam.io.ReadFromText('test_small.csv', skip_header_lines=1)
+      		| beam.io.ReadFromText('data/gsod_small.csv', skip_header_lines=1)
       		| beam.Map(lambda line: next(csv.reader([line])))
       		| beam.Map(lambda fields: (fields[3], (fields[30])))
 		| beam.io.textio.WriteToText('extracted_tornados') 
