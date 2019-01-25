@@ -185,7 +185,7 @@ https://console.cloud.google.com/dataflow/
 You should soon see a new job that is in status `running`. Click on it and follow the execution, this will take a few minutes. In the autoscaling section on the right hand side you should see only one worker is being started. 
 
 You should see a simple DAG being executed: 
-![](https://github.com/aosterloh/beam4dummies/tree/master/images/tornadoes3.png "Dataflow Execution DAG")
+![Dataflow DAG](https://github.com/aosterloh/beam4dummies/blob/master/images/tornadoes3.png?raw=true "Dataflow Execution DAG")
 
 
 
