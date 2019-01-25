@@ -169,7 +169,7 @@ python tornadoes02.py
 Alternatively you can repace the small csv file from line 8 with `test_medium.csv` which processes about 25MB locally. Check the output file `less extract*` which should be around 150K lines. 
 
 ## Expanding the Pipeline (tornados03.py)
-This version has 2 major changes: 
+This version has few major changes: 
 * we go from a local runner to using the Dataflow service to execute the pipeline (yet same csv file as before)
 * Reading data and writing results from and to Google Cloud Storage 
 * using bash script `run03.sh `to execute the pipeline and pass arguments
