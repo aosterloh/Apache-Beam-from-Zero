@@ -54,7 +54,7 @@ ORDER BY num desc
 ```
 Next let's make sure running our first Beam pipeline actually works. Just enter 
 ```
-python tornado01.py
+python tornadoes01.py
 ```
 That should read the small local CSV file and output a local file like `extracted_tornadoes-00000-of-00001`. Spoiler, the pipelines does nothing except read data and write it back to file. We will look at other transforms later. 
 
