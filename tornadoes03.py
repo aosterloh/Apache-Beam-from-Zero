@@ -21,13 +21,13 @@ def run(argv=None):
 
   parser.add_argument('--input',
   required=True,
-  default='gs://alex-testdata/weather/gsod_medium.csv',
+  default='gs://<your bucket>/weather/gsod_medium.csv', #no need to change, as taken from arguments in run03.sh
   help=('input bucket of test weather data'))
 
   parser.add_argument(
   '--output',
   required=True,
-  default='gs://alex-testdata/output/',
+  default='gs://<your bucket>/output/', #no need to change, as taken from arguments in run03.sh
   help= ('Where to write result to'))
 
   known_args, pipeline_args = parser.parse_known_args(argv)
