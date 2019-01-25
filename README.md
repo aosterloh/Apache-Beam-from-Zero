@@ -174,7 +174,7 @@ This version has few major changes:
 * Reading data and writing results from and to Google Cloud Storage 
 * using bash script `run03.sh `to execute the pipeline and pass arguments
 
-Go ahead and change the project ID and bucket name in `run03.sh`  and then run it
+Go ahead and *change the project ID and bucket name* in `run03.sh`  and then run it
 
 ```
 ./run03.sh
