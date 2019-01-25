@@ -179,6 +179,15 @@ Go ahead and **change the project ID and bucket name** in `run03.sh`  and then r
 ```
 ./run03.sh
 ```
+With some luck you run this without errors and can switch over to the Google Cloud Console 
+https://console.cloud.google.com/dataflow/
+
+You should soon see a new job that is in status `running`. Click on it and follow the execution, this will take a few minutes. In the autoscaling section on the right hand side you should see only one worker is being started. 
+
+You should see a simple DAG being executed: 
+![](https://github.com/aosterloh/beam4dummies/tree/master/images/tornadoes3.png "Dataflow Execution DAG")
+
+
 
 ## Expanding the Pipeline (tornados04.py)
 WIP
