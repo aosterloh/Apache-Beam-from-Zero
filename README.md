@@ -21,8 +21,8 @@ git clone https://github.com/aosterloh/beam4dummies.git
 cd beam4dummies
 ```
 
-## New to Python?
-If so, have a look at attached Jupyter notebook. Just install jupyter using 
+## Not a Python black belt yet?
+If not, have a look at attached Jupyter notebook as it goes through some things that your beginner python course might have missed. Just install jupyter using 
 ```
 pip install jupyter
 ```
