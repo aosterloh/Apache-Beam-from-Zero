@@ -107,6 +107,9 @@ tornadoes = (pipeline
 )
 ```
 
+If the pipe "|" symbol looks weird to you, have a look at the explanation about overloading operators. 
+https://stackoverflow.com/questions/43796046/explain-apache-beam-python-syntax
+
 ### Running the pipeline
 While the steps before defined our DAG, in order to execute the pipeline, we actually have to run it. So will call `run()` on our pipeline object. 
 
