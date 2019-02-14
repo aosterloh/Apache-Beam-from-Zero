@@ -37,7 +37,7 @@ and open the downloaded notebook called `Python Basics for Apache Beam`
 
 ## Running our first pipeline (tornadoes01.py)
 My examples build up and are loosely based on the Apache Beam example of weather - specifically tornado - data example found here:
-https://github.com/apache/beam/tree/master/examples/java/src/main/java/org/apache/beam/examples/complete
+https://github.com/apache/beam/blob/master/sdks/python/apache_beam/examples/cookbook/bigquery_tornadoes.py
 
 The above example reads and writes to BigQuery. You can play with the dataset here
 https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=samples&t=gsod&page=table
@@ -199,22 +199,17 @@ This will crunch through about 18GB of data. You should gradually see the number
 My job kept 13 workers busy over 11 minutes. Dataflow does alot of optimization under the covers, incl. [auto-scaling](https://cloud.google.com/blog/products/gcp/comparing-cloud-dataflow-autoscaling-to-spark-and-hadoop) and [dynamic work rebalancing](https://cloud.google.com/blog/products/gcp/no-shard-left-behind-dynamic-work-rebalancing-in-google-cloud-dataflow). 
 
 ## Expanding the Pipeline (tornados04.py)
-WIP
+This is actually the completed example you find at 
+https://github.com/apache/beam/blob/master/sdks/python/apache_beam/examples/cookbook/bigquery_tornadoes.py
+
+The only difference: you are now reading from and writing to BigQuery. Like above, change the Project and Bucket in `run04.sh` and run the pipeline: 
+
+```
+./run04.sh
+``` 
+
+
 
 ## Expanding the Pipeline (tornados05.py)
-WIP
+Going from batch to streaming ... coming soon. 
 
-## Expanding the Pipeline (tornados06.py)
-WIP
-
-## Expanding the Pipeline (tornados07.py)
-WIP
-
-## Expanding the Pipeline (tornados08.py)
-WIP
-
-## Expanding the Pipeline (tornados09.py)
-WIP
-
-## Expanding the Pipeline (tornados10.py)
-WIP
