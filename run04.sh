@@ -1,8 +1,9 @@
-PROJECT=data-academy-2018
-BUCKET=alex-testdata
-python -m tornadoes04 --input gs://$BUCKET/weather/gsod_medium.csv \
-  --output gs://$BUCKET/output/ \
+PROJECT=<PROJECTID>
+BUCKET=<BUCKET>
+
+python -m tornadoes10 --input $PROJECT:gsod.weather \
+  --output $PROJECT:gsod.output \
+  --output_tablename tornadocount \
   --runner DataflowRunner \
   --project $PROJECT \
-  --region europe-west1 \
-  --temp_location gs://$BUCKET/temp_location 
+  --temp_location gs://$BUCKET/staging \
