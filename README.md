@@ -187,6 +187,14 @@ You should soon see a new job that is in status `running`. Click on it and follo
 You should see a simple DAG being executed: 
 ![Dataflow DAG](https://github.com/aosterloh/beam4dummies/blob/master/images/tornadoes3.png?raw=true "Dataflow Execution DAG")
 
+To run the medium size (25MB) csv will likely be done by 1 worker. This will look differently if you try this with bigger files. E.g. try the same but replace the bucket files in the `run03.sh`  (caution the costs!!!) :
+
+```
+python -m tornadoes03 --input gs://$BUCKET/weather/gsod_weather* \
+```
+This will crunch through about 18GB of data. You should gradually see the number of workers increasing. 
+
+![Dataflow Autoscaling](images/dataflow-autoscaling.png "Dataflow Autoscaling")
 
 
 ## Expanding the Pipeline (tornados04.py)
