@@ -196,6 +196,7 @@ This will crunch through about 18GB of data. You should gradually see the number
 
 ![Dataflow Autoscaling](images/dataflow-autoscaling.png)
 
+My job kept 13 workers busy over 11 minutes. Dataflow does alot of optimization under covers, incl. [auto-scaling](https://cloud.google.com/blog/products/gcp/comparing-cloud-dataflow-autoscaling-to-spark-and-hadoop) and [dynamic work rebalancing](https://cloud.google.com/blog/products/gcp/no-shard-left-behind-dynamic-work-rebalancing-in-google-cloud-dataflow). 
 
 ## Expanding the Pipeline (tornados04.py)
 WIP
