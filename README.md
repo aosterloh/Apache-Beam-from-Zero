@@ -194,7 +194,7 @@ python -m tornadoes03 --input gs://$BUCKET/weather/gsod_weather* \
 ```
 This will crunch through about 18GB of data. You should gradually see the number of workers increasing. 
 
-![Dataflow Autoscaling](images/dataflow-autoscaling.png =500px "Dataflow Autoscaling")
+![Dataflow Autoscaling](images/dataflow-autoscaling.png =300x "Dataflow Autoscaling")
 
 
 ## Expanding the Pipeline (tornados04.py)
