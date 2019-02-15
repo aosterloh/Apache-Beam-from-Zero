@@ -20,6 +20,7 @@ source beamzero/bin/activate # activate your env
 cd beamzero
 pip install apache-beam[gcp]
 git clone https://github.com/aosterloh/Apache-Beam-from-Zero.git
+cd Apache-Beam-from-Zero
 ```
 
 ## Not a Python black belt yet?
