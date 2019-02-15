@@ -36,6 +36,8 @@ jupyter notebook
 
 and open the downloaded notebook called `Python Basics for Apache Beam`
 
+![](images/notebook.png)
+
 
 ## Running our first pipeline (tornadoes01.py)
 My examples build up and are loosely based on the Apache Beam example of weather - specifically tornado - data example found here:
