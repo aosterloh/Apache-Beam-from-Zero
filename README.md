@@ -39,7 +39,7 @@ and open the downloaded notebook called `Python Basics for Apache Beam`
 My examples build up and are loosely based on the Apache Beam example of weather - specifically tornado - data example found here:
 https://github.com/apache/beam/blob/master/sdks/python/apache_beam/examples/cookbook/bigquery_tornadoes.py
 
-The above example reads and writes to BigQuery. You can play with the dataset here
+The above example reads and writes to BigQuery. See the dataset here:
 https://console.cloud.google.com/bigquery?p=bigquery-public-data&d=samples&t=gsod&page=table
 
 You can play with the dataset and try a quick query, e.g. see the month with the most tornadoes
