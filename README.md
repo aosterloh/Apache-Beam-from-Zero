@@ -6,7 +6,7 @@ https://beam.apache.org/documentation/programming-guide/
 
 
 ## Setup
-With a MAC, follow the steps described below, otherwise have a look here:
+With a Mac, follow the steps described below, otherwise have a look here:
 https://beam.apache.org/get-started/quickstart-py/
 
 **Unix/Mac setup:**
