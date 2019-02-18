@@ -1,7 +1,7 @@
 PROJECT=<PROJECTID>
 BUCKET=<BUCKET>
 
-python -m tornadoes10 --input $PROJECT:gsod.weather \
+python -m tornadoes04 --input $PROJECT:gsod.weather \
   --output $PROJECT:gsod.output \
   --output_tablename tornadocount \
   --runner DataflowRunner \
