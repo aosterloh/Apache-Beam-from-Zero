@@ -219,4 +219,4 @@ Going from batch to streaming ... coming soon.
 
 
 Top open in Google Open Cloud Shell, click below
-[![here](//gstatic.com/cloudssh/images/open-btn.svg)](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/aosterloh/Apache-Beam-from-Zero.git)
+[![here]](https://console.cloud.google.com/cloudshell/editor?cloudshell_git_repo=https://github.com/aosterloh/Apache-Beam-from-Zero.git)
